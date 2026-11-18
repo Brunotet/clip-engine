@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+yt-dlp
+whisperx
+scenedetect[opencv-headless]
+soundfile
+numpy
