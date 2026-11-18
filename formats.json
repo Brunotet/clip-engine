@@ -1,0 +1,30 @@
+{
+  "how_they_beat_it": {
+    "when_to_use": "Streamer completes or struggles with a mission and there is a clear sequence of steps.",
+    "aspect": "9:16",
+    "min_clips": 3, "max_clips": 8, "max_clip_sec": 18,
+    "min_narration_ratio": 0.7, "max_total_sec": 90,
+    "must_include": ["hook", "step_overlay", "verdict_or_tip"]
+  },
+  "fail_vs_right_way": {
+    "when_to_use": "Streamer makes a visible mistake, dies, or fails an objective.",
+    "aspect": "9:16",
+    "min_clips": 2, "max_clips": 5, "max_clip_sec": 14,
+    "min_narration_ratio": 0.75, "max_total_sec": 60,
+    "must_include": ["hook", "mistake_explained", "correct_method"]
+  },
+  "top_moments": {
+    "when_to_use": "Long VOD with several distinct high-energy moments and no single mission arc.",
+    "aspect": "16:9",
+    "min_clips": 5, "max_clips": 5, "max_clip_sec": 20,
+    "min_narration_ratio": 0.65, "max_total_sec": 240,
+    "must_include": ["hook", "ranking", "commentary_each"]
+  },
+  "short_moment": {
+    "when_to_use": "One standout moment (funny, shocking, skillful).",
+    "aspect": "9:16",
+    "min_clips": 1, "max_clips": 2, "max_clip_sec": 15,
+    "min_narration_ratio": 0.6, "max_total_sec": 30,
+    "must_include": ["hook", "context", "take"]
+  }
+}
