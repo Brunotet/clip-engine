@@ -1,4 +1,4 @@
-import subprocess, json
+import os, subprocess, json
 from pathlib import Path
 
 
@@ -18,6 +18,13 @@ def download(url: str, job_dir: Path, start: str | None = None,
            "--merge-output-format", "mp4", "--no-playlist",
            "-o", str(out), "--print", "%(title)s|||%(uploader)s",
            "--no-simulate"]
+    ck = os.getenv("YT_COOKIES_TXT", "").strip()
+    if ck:  # optional YouTube cookies (Netscape format) to pass the bot check
+        cf = "/tmp/yt_cookies.txt"
+        with open(cf, "w") as fh:
+            fh.write(ck + "\n")
+        os.chmod(cf, 0o600)
+        cmd += ["--cookies", cf]
     if start or end:
         cmd += ["--download-sections", f"*{start or '0'}-{end or 'inf'}"]
     cmd.append(url)
