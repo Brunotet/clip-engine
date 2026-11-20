@@ -14,7 +14,7 @@ def download(url: str, job_dir: Path, start: str | None = None,
     """Download a video. start/end like '01:20:00' to grab only part of a long VOD."""
     out = job_dir / "source.mp4"
     cmd = ["yt-dlp", "-f",
-           f"bv*[height<={max_height}]+ba/b[height<={max_height}]",
+           f"bv*[height<={max_height}]+ba/b[height<={max_height}]/b",
            "--merge-output-format", "mp4", "--no-playlist",
            "-o", str(out), "--print", "%(title)s|||%(uploader)s",
            "--no-simulate"]
